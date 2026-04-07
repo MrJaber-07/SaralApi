@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using SaralApi.Interface;
 using SaralApi.Repositories;
 using SaralApi.Services;
 using Swashbuckle.AspNetCore.SwaggerGen;

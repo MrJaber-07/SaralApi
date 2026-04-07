@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SaralApi.Interface;
 using SaralApi.Repositories;
 
 namespace SaralApi.Repositories
