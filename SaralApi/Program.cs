@@ -25,6 +25,11 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 // Register Service
 builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddCors(options => {
+    options.AddDefaultPolicy(policy =>
+        policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
+
 
 
 var app = builder.Build();
@@ -39,7 +44,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
+app.UseCors();
 app.MapControllers();
 
 app.Run();
